@@ -43,11 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dominio\Aluno.cs" />
+    <Compile Include="Dominio\Disciplina.cs" />
+    <Compile Include="Dominio\Matricula.cs" />
+    <Compile Include="Dominio\Nota.cs" />
+    <Compile Include="Dominio\Pessoa.cs" />
+    <Compile Include="Dominio\Professor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicos\ServicoAvaliacao.cs" />
+    <Compile Include="Servicos\ServicoCadastro.cs" />
+    <Compile Include="Servicos\ServicoMatricula.cs" />
+    <Compile Include="Servicos\ServicoRelatorio.cs" />
+    <Compile Include="UI\TerminalUI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Dados\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -21,5 +21,6 @@ namespace GestaoAcademica.Dominio
         {
             return $"Professor: {Nome}, Disciplina: {Disciplina}, Salário: {Salario:C}";
         }
+
     }
 }
