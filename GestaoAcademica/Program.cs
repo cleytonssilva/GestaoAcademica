@@ -1,32 +1,39 @@
 ﻿using System;
 using GestaoAcademica.Dados;
-using GestaoAcademica.Dominio;
 using GestaoAcademica.Servicos;
 using GestaoAcademica.UI;
-using System.Collections.Generic;
-using System.Linq;
+
 
 
 public class Program
 {
     public static void Main(string[] args)
     {
-        // Inicialização dos repositórios
-        IRepositorioAluno repositorioAluno = new RepositorioAlunoEmMemoria();
-        IRepositorioProfessor repositorioProfessor = new RepositorioProfessorEmMemoria();
-        IRepositorioDisciplina repositorioDisciplina = new RepositorioDisciplinaEmMemoria();
-        IRepositorioMatricula repositorioMatricula = new RepositorioMatriculaEmMemoria();
+        try
+        {
+            // Inicialização dos repositórios (injeção de dependência)
+            IRepositorioAluno repositorioAluno = new RepositorioAlunoEmMemoria();
+            IRepositorioProfessor repositorioProfessor = new RepositorioProfessorEmMemoria();
+            IRepositorioDisciplina repositorioDisciplina = new RepositorioDisciplinaEmMemoria();
+            IRepositorioMatricula repositorioMatricula = new RepositorioMatriculaEmMemoria();
 
-        // Inicialização dos serviços
-        ServicoCadastro servicoCadastro = new ServicoCadastro(repositorioAluno, repositorioProfessor, repositorioDisciplina);
-        ServicoMatricula servicoMatricula = new ServicoMatricula(repositorioMatricula);
-        ServicoAvaliacao servicoAvaliacao = new ServicoAvaliacao();
-        ServicoRelatorio servicoRelatorio = new ServicoRelatorio();
+            // Inicialização dos serviços com injeção de repositórios
+            ServicoCadastro servicoCadastro = new ServicoCadastro(repositorioAluno, repositorioProfessor, repositorioDisciplina);
+            ServicoMatricula servicoMatricula = new ServicoMatricula(repositorioMatricula);
+            ServicoAvaliacao servicoAvaliacao = new ServicoAvaliacao();
+            ServicoRelatorio servicoRelatorio = new ServicoRelatorio();
 
-        // Inicialização da interface do usuário
-        TerminalUI terminalUI = new TerminalUI(servicoCadastro, servicoMatricula, servicoAvaliacao, servicoRelatorio);
+            // Inicialização da interface do usuário (terminal)
+            TerminalUI terminalUI = new TerminalUI(servicoCadastro, servicoMatricula, servicoAvaliacao, servicoRelatorio);
 
-        // Execução do sistema
-        terminalUI.Executar();
+            // Execução do sistema
+            terminalUI.Executar();
+        }
+        catch (Exception ex)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"Erro fatal no sistema: {ex.Message}");
+            Console.ResetColor();
+        }
     }
 }

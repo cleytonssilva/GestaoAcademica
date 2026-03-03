@@ -56,6 +56,7 @@
     <Compile Include="Servicos\ServicoCadastro.cs" />
     <Compile Include="Servicos\ServicoMatricula.cs" />
     <Compile Include="Servicos\ServicoRelatorio.cs" />
+    <Compile Include="Servicos\ValidadorAcademico.cs" />
     <Compile Include="UI\TerminalUI.cs" />
   </ItemGroup>
   <ItemGroup>
