@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GestaoAcademica.Dados;
 using GestaoAcademica.Dominio;
 using GestaoAcademica.Servicos;
 using System.Collections.Generic;
@@ -79,11 +75,21 @@ namespace GestaoAcademica.UI
             Console.Write("Email: ");
             string email = Console.ReadLine();
             Console.Write("Data de Nascimento (dd/MM/yyyy): ");
-            DateTime dataNascimento = DateTime.Parse(Console.ReadLine());
+            DateTime dataNascimento;
+            // O loop repete até o usuário digitar uma data válida
+            while (!DateTime.TryParse(Console.ReadLine(), out dataNascimento))
+            {
+                Console.WriteLine("Formato inválido! Certifique-se de digitar uma data real.");
+                Console.Write("Data de Nascimento (dd/MM/yyyy): ");
+            }
             Console.Write("CPF: ");
             string cpf = Console.ReadLine();
             Console.Write("Matrícula: ");
             int matricula = int.Parse(Console.ReadLine());
+
+
+            
+            
 
             try
             {
