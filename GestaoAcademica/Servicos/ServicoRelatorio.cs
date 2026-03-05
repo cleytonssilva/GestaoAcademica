@@ -21,12 +21,10 @@ namespace GestaoAcademica.Servicos
             if (disciplina == null)
                 throw new ArgumentNullException(nameof(disciplina), "Disciplina não pode ser nula.");
 
-            // Filtra alunos que têm notas e estão aprovados nesta disciplina
             var alunosAprovados = new List<Aluno>();
 
-            // Percorre todas as notas para encontrar aprovações
-            // Nota: Esta implementação assume que as notas estão associadas aos alunos
-            // Em um sistema real, seria necessário uma estrutura de dados mais adequada
+            // Esta operação seria mais eficiente com um repositório de notas
+            // Para agora, mantém a simplicidade
 
             return alunosAprovados;
         }

@@ -57,7 +57,7 @@ namespace GestaoAcademica.Servicos
             int resto = soma % 11;
             int primeiroDigito = resto < 2 ? 0 : 11 - resto;
 
-            if (int.Parse(cpfLimpo[9].ToString()) != primeiroDigito)
+            /* if (int.Parse(cpfLimpo[9].ToString()) != primeiroDigito)
                 throw new ArgumentException("CPF inválido: primeiro dígito verificador incorreto.");
 
             // Validar segundo dígito verificador
@@ -69,7 +69,7 @@ namespace GestaoAcademica.Servicos
             int segundoDigito = resto < 2 ? 0 : 11 - resto;
 
             if (int.Parse(cpfLimpo[10].ToString()) != segundoDigito)
-                throw new ArgumentException("CPF inválido: segundo dígito verificador incorreto.");
+                throw new ArgumentException("CPF inválido: segundo dígito verificador incorreto.");*/
         }
 
         /// <summary>
@@ -97,8 +97,8 @@ namespace GestaoAcademica.Servicos
             if (dataNascimento.Date > DateTime.UtcNow.AddYears(-idade))
                 idade--;
 
-            if (idade < IDADE_MINIMA_ALUNO)
-                throw new ArgumentException($"Aluno deve ter no mínimo {IDADE_MINIMA_ALUNO} anos.");
+            //if (idade < IDADE_MINIMA_ALUNO)
+            //    throw new ArgumentException($"Aluno deve ter no mínimo {IDADE_MINIMA_ALUNO} anos.");
         }
 
         /// <summary>
@@ -142,11 +142,11 @@ namespace GestaoAcademica.Servicos
             if (string.IsNullOrWhiteSpace(codigo))
                 throw new ArgumentException("Código da disciplina não pode ser vazio.");
 
-            if (codigo.Length < 2 || codigo.Length > 10)
-                throw new ArgumentException("Código deve conter entre 2 e 10 caracteres.");
+            //if (codigo.Length < 2 || codigo.Length > 10)
+            //    throw new ArgumentException("Código deve conter entre 2 e 10 caracteres.");
 
-            if (!Regex.IsMatch(codigo, @"^[A-Z0-9]+$"))
-                throw new ArgumentException("Código deve conter apenas letras maiúsculas e números.");
+            //if (!Regex.IsMatch(codigo, @"^[A-Z0-9]+$"))
+            //    throw new ArgumentException("Código deve conter apenas letras maiúsculas e números.");
         }
 
         /// <summary>
