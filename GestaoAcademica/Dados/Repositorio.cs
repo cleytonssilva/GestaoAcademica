@@ -40,8 +40,7 @@ namespace GestaoAcademica.Dados
         bool VerificarMatriculaEmDisciplina(int matriculaAluno, string codigoDisciplina);
     }
 
-    // Implementações em memória (para simplificar o exemplo)
-
+    
     public class RepositorioAlunoEmMemoria : IRepositorioAluno
     {
         private List<Aluno> _alunos = new List<Aluno>();

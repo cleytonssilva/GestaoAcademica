@@ -6,16 +6,10 @@ using System.Text;
 
 namespace GestaoAcademica.Servicos
 {
-    /// <summary>
-    /// Serviço de geração de relatórios acadêmicos.
-    /// Responsável por análises e consultas de dados acadêmicos.
-    /// </summary>
+  
     public class ServicoRelatorio
     {
-        /// <summary>
-        /// Lista todos os alunos aprovados em uma disciplina.
-        /// Um aluno é considerado aprovado se tiver nota >= 6.0 na disciplina.
-        /// </summary>
+       
         public List<Aluno> ListarAlunosAprovados(Disciplina disciplina)
         {
             if (disciplina == null)
@@ -23,15 +17,12 @@ namespace GestaoAcademica.Servicos
 
             var alunosAprovados = new List<Aluno>();
 
-            // Esta operação seria mais eficiente com um repositório de notas
-            // Para agora, mantém a simplicidade
+            
 
             return alunosAprovados;
         }
 
-        /// <summary>
-        /// Lista alunos aprovados com base em suas médias gerais.
-        /// </summary>
+        
         public List<Aluno> ListarAlunosAprovadosGeral(List<Aluno> alunos)
         {
             if (alunos == null)
@@ -43,9 +34,7 @@ namespace GestaoAcademica.Servicos
                 .ToList();
         }
 
-        /// <summary>
-        /// Gera relatório de desempenho de um aluno.
-        /// </summary>
+        
         public string GerarRelatórioAluno(Aluno aluno)
         {
             if (aluno == null)
@@ -77,9 +66,7 @@ namespace GestaoAcademica.Servicos
             return relatorio.ToString();
         }
 
-        /// <summary>
-        /// Gera estatísticas gerais do sistema.
-        /// </summary>
+        
         public string GerarEstatisticas(List<Aluno> alunos, List<Professor> professores, List<Disciplina> disciplinas)
         {
             StringBuilder stats = new StringBuilder();

@@ -5,10 +5,7 @@ using System.Collections.Generic;
 
 namespace GestaoAcademica.Servicos
 {
-    /// <summary>
-    /// Serviço responsável pelo cadastro de entidades acadêmicas.
-    /// Aplicar validações e regras de negócio no cadastro.
-    /// </summary>
+    
     public class ServicoCadastro
     {
         private readonly IRepositorioAluno _repositorioAluno;
@@ -23,9 +20,7 @@ namespace GestaoAcademica.Servicos
             _repositorioDisciplina = repositorioDisciplina;
         }
 
-        /// <summary>
-        /// Cadastra um novo aluno com validações de regras de negócio.
-        /// </summary>
+        
         public Aluno CadastrarAluno(string nome, string email, DateTime dataNascimento, string cpf, int matricula)
         {
             // Validações de negócio
@@ -47,9 +42,6 @@ namespace GestaoAcademica.Servicos
             return aluno;
         }
 
-        /// <summary>
-        /// Cadastra um novo professor com validações de regras de negócio.
-        /// </summary>
         public Professor CadastrarProfessor(string nome, string email, DateTime dataNascimento, string cpf, string disciplina, decimal salario)
         {
             // Validações de negócio
@@ -69,9 +61,7 @@ namespace GestaoAcademica.Servicos
             return professor;
         }
 
-        /// <summary>
-        /// Cadastra uma nova disciplina com validações de regras de negócio.
-        /// </summary>
+        
         public Disciplina CadastrarDisciplina(string nome, string codigo, Professor professorResponsavel)
         {
             // Validações de negócio
@@ -95,9 +85,7 @@ namespace GestaoAcademica.Servicos
             return disciplina;
         }
 
-        /// <summary>
-        /// Obtém um aluno pela matrícula.
-        /// </summary>
+        
         public Aluno ObterAluno(int matricula)
         {
             var aluno = _repositorioAluno.ObterPorMatricula(matricula);
@@ -106,9 +94,7 @@ namespace GestaoAcademica.Servicos
             return aluno;
         }
 
-        /// <summary>
-        /// Obtém um professor pelo CPF.
-        /// </summary>
+        
         public Professor ObterProfessor(string cpf)
         {
             var professor = _repositorioProfessor.ObterPorCPF(cpf);
@@ -117,9 +103,7 @@ namespace GestaoAcademica.Servicos
             return professor;
         }
 
-        /// <summary>
-        /// Obtém uma disciplina pelo código.
-        /// </summary>
+        
         public Disciplina ObterDisciplina(string codigo)
         {
             var disciplina = _repositorioDisciplina.ObterPorCodigo(codigo);
@@ -128,25 +112,18 @@ namespace GestaoAcademica.Servicos
             return disciplina;
         }
 
-        /// <summary>
-        /// Lista todos os alunos cadastrados.
-        /// </summary>
+     
         public List<Aluno> ListarAlunos()
         {
             return _repositorioAluno.ListarTodos();
         }
 
-        /// <summary>
-        /// Lista todos os professores cadastrados.
-        /// </summary>
+        
         public List<Professor> ListarProfessores()
         {
             return _repositorioProfessor.ListarTodos();
         }
 
-        /// <summary>
-        /// Lista todas as disciplinas cadastradas.
-        /// </summary>
         public List<Disciplina> ListarDisciplinas()
         {
             return _repositorioDisciplina.ListarTodos();
