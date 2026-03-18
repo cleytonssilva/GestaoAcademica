@@ -41,15 +41,24 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dados\ConexaoBancoDados.cs" />
+    <Compile Include="Dados\GestaoAcademicaContext.cs" />
+    <Compile Include="Dados\RepositorioAlunoMySQL.cs" />
+    <Compile Include="Dados\RepositorioProfessorMySQL.cs" />
+    <Compile Include="Dados\RepositorioDisciplinaMySQL.cs" />
+    <Compile Include="Dados\RepositorioMatriculaMySQL.cs" />
     <Compile Include="Dados\Repositorio.cs" />
     <Compile Include="Dominio\Aluno.cs" />
+    <Compile Include="Dominio\Avaliacao.cs" />
     <Compile Include="Dominio\Disciplina.cs" />
     <Compile Include="Dominio\Matricula.cs" />
     <Compile Include="Dominio\Nota.cs" />
     <Compile Include="Dominio\Pessoa.cs" />
     <Compile Include="Dominio\Professor.cs" />
+    <Compile Include="Dominio\Turma.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Servicos\ServicoAvaliacao.cs" />

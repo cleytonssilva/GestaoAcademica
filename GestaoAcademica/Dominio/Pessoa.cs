@@ -13,10 +13,17 @@ namespace GestaoAcademica.Dominio
         public string Email { get; set; }
         public DateTime DataNascimento { get; set; }
         public string CPF { get; set; }
+        public DateTime DataCadastro { get; set; }
 
-        public Pessoa(string nome, string email, DateTime dataNascimento, string cpf)
+        public Pessoa()
         {
             Id = Guid.NewGuid();
+            DataCadastro = DateTime.UtcNow;
+        }
+
+        public Pessoa(string nome, string email, DateTime dataNascimento, string cpf)
+            : this()
+        {
             Nome = nome;
             Email = email;
             DataNascimento = dataNascimento;
