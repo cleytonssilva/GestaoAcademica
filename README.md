@@ -1,7 +1,7 @@
 # 📚 Sistema de Gestão Acadêmica
 
 **Versão:** 1.0  
-**Status:** ✅ Em Produção  
+**Status:** ✅ Concluído        
 **Linguagem:** C# 7.3  
 **Framework:** .NET Framework 4.7.2  
 **Padrão de Arquitetura:** Camadas (Layered Architecture)
@@ -46,7 +46,7 @@ O **Sistema de Gestão Acadêmica** é uma aplicação prática desenvolvida com
 | RF-003 | Cadastrar disciplinas com professor responsável | Alta |
 | RF-004 | Matricular alunos em disciplinas | Alta |
 | RF-005 | Atribuir notas aos alunos por disciplina | Alta |
-| RF-006 | Listar alunos aprovados (média >= 6.0) | Alta |
+| RF-006 | Listar alunos aprovados (média >= 7.0) | Alta |
 | RF-007 | Gerar relatórios individuais de alunos | Média |
 | RF-008 | Gerar estatísticas gerais do sistema | Média |
 
@@ -67,7 +67,7 @@ RN-001: Aluno deve ter mínimo 18 anos
 RN-002: Matrícula deve ser única por aluno
 RN-003: CPF deve ser único (validado com algoritmo)
 RN-004: Nota deve estar entre 0 e 10
-RN-005: Aprovação requer média >= 6.0
+RN-005: Aprovação requer média >= 7.0
 RN-006: Professor obrigatório em disciplina
 RN-007: Salário mínimo: R$ 1.000,00
 RN-008: Email deve seguir padrão válido
@@ -320,7 +320,7 @@ start GestaoAcademica.sln
 ✓ Valor entre 0 e 10
 ✓ Apenas 1 nota por disciplina
 ✓ Aluno deve estar matriculado
-✓ Aprovação automática se >= 6.0
+✓ Aprovação automática se >= 7.0
 ```
 
 ---
