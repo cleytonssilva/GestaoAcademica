@@ -70,7 +70,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CHECKLIST_FINAL.md" />
+    <None Include="COMECE_AQUI.md" />
+    <None Include="QUICK_VALIDATION.md" />
+    <None Include="RESUMO_IMPLEMENTACOES.md" />
+    <None Include="SETUP_DATABASE.md" />
+    <None Include="TESTE_VALIDACAO_BANCO.md" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Scripts\01-CreateDatabase.sql" />
+    <Content Include="Scripts\02-CreateViews.sql" />
+    <Content Include="Scripts\03-InsertSampleData.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

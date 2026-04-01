@@ -29,14 +29,14 @@ namespace GestaoAcademica.Dados
                 else
                 {
                     // Usar padrão se não encontrar na config
-                    _connectionString = "Server=localhost;Database=gestao_academica;User=root;Password=;";
+                    _connectionString = "Server=localhost;Database=SistemaBDGestaoAcademica;User=root;Password=;";
                 }
             }
             catch (Exception ex)
             {
                 // Se houver erro ao ler App.config, usar padrão
                 System.Diagnostics.Debug.WriteLine($"Erro ao ler App.config: {ex.Message}");
-                _connectionString = "Server=localhost;Database=gestao_academica;User=root;Password=;";
+                _connectionString = "Server=localhost;Database=SistemaBDGestaoAcademica;User=root;Password=;";
             }
         }
 
