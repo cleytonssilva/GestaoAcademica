@@ -1,10 +1,10 @@
 # 📚 Sistema de Gestão Acadêmica
 
 **Versão:** 1.0  
-**Status:** ✅ Concluído        
-**Linguagem:** C# 7.3  
-**Framework:** .NET Framework 4.7.2  
-**Padrão de Arquitetura:** Camadas (Layered Architecture)
+**Status:** ✅ Concluído e Pronto para Apresentação      
+**Linguagem:** C# 11+  
+**Framework:** .NET 10.0  
+**Padrão de Arquitetura:** Layered Architecture (4 camadas)
 
 ---
 
